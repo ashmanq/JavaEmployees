@@ -44,4 +44,10 @@ public class ManagerTest {
     public void canGetBonusAmount() {
        assertEquals(300.00, manager.payBonus(), 0.01);
    }
+
+   @Test
+    public void doesNotChangeSalaryWhenRiseIsNegative() {
+       manager.raiseSalary(-10000.00);
+       assertEquals(30000.00, manager.getSalary(), 0.01);
+   }
 }
