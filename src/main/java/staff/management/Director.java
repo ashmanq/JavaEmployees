@@ -12,4 +12,9 @@ public class Director extends Manager {
     public Double getBudget() {
         return budget;
     }
+    // Overrides Employee class to give Directors 2% bonus
+    // If only director bonuses were this low in real life!
+    public Double payBonus() {
+        return (this.getSalary()/100) * 2;
+    }
 }
